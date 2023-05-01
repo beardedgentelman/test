@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zoran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+      .header__nav-link {
+        background: linear-gradient(to right, #26a768, #26a768 50%, #000 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+      }
+      .header__nav-link:hover {
+        background-position: 0 100%;
+      }
+      .accordion-content {
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+      }
+      @media screen and (max-width: 1024px) {
+        #stain {
+          background-position: center right !important;
+        }
+        footer {
+          background: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden scroll-smooth">
+    <div class="relative flex flex-col font-grifter text-lg font-bold">
+      <header id="header" class="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-7 lg:static">
+        <a href="/" class="relative z-30 block max-w-xs text-[#26A768]">
+          <!-- <img class="w-full" src="" alt="Logo" /> -->
+          <span class="text-3xl font-bold">ZP</span>
+        </a>
+        <nav id="header_nav" class="absolute -left-[150%] top-0 z-20 h-screen w-full bg-white transition-all duration-200 ease-linear md:relative md:left-auto md:h-auto md:w-fit">
+          <ul class="flex items-center gap-12 max-md:relative max-md:top-1/2 max-md:-translate-y-1/2 max-md:flex-col">
+            <li class="flex items-center">
+              <a href="#" class="header__nav-link relative inline-block overflow-hidden max-md:text-xl"> Home </a>
+            </li>
+            <li class="flex items-center">
+              <a href="#" class="header__nav-link relative inline-block overflow-hidden max-md:text-xl"> Flutter Consultant </a>
+            </li>
+            <li class="flex items-center">
+              <a href="#" class="header__nav-link relative inline-block overflow-hidden max-md:text-xl">Android Consultant</a>
+            </li>
+            <li class="flex items-center">
+              <a href="#form_section" class="header__nav-link relative inline-block overflow-hidden max-md:text-xl">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="burger_icon" class="relative hidden h-6 w-10 cursor-pointer transition-transform max-md:z-20 max-md:block">
+          <span class="burger-line absolute left-0 top-0 block h-[2px] w-full rounded bg-black opacity-100 transition-all duration-200 ease-linear"></span>
+          <span class="burger-line absolute left-0 top-1/2 block h-[2px] w-full -translate-y-1/2 rounded bg-black transition-all duration-200 ease-linear"></span>
+          <span class="burger-line absolute bottom-0 left-0 block h-[2px] w-full rounded bg-black opacity-100 transition-all duration-200 ease-linear"></span>
+        </div>
+      </header>
+      <main class="mx-auto w-full flex-auto">
+        <section id="hero" class="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 lg:flex-row">
+          <div class="flex w-full max-w-full flex-col lg:block lg:max-w-[60%] lg:flex-row min-[1920px]:mt-7">
+            <span class="animate__animated animate__fadeInLeft animate__faster inline-block max-md:text-center max-md:text-sm">Freelance Flutter Developer</span>
+            <h1 class="my-2 text-[52px] leading-tight max-xl:w-fit max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:w-fit max-md:text-center max-md:text-[22px]">Your Trusted Partner<br /><span class="relative z-10 block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#26A768]">in Mobile App Development</span></h1>
+            <div class="mx-auto w-1/2 max-w-lg lg:absolute lg:right-[-20px] lg:top-1/2 lg:w-full lg:-translate-y-1/2">
+              <img class="w-full" src="./img/hero_img.png" alt="Hero picture" />
+            </div>
+            <p class="animate__animated animate__fadeInLeft mt-8 max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Finding the right developer can be challenging. But worry not, as I've been in your shoes before and understand the importance of hiring a dependable partner for your app development needs.</p>
+            <p class="animate__animated animate__fadeInLeft animate__slow mt-10 max-w-[70%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:mt-5 max-md:w-full max-md:text-center max-md:text-base">If you’re eager to learn more, continue reading or get in touch with me right away for a no-strings-attached consultation</p>
+            <div class="mx-0 mt-5 flex w-full flex-col gap-5 sm:mx-auto sm:w-1/2 lg:mx-0 lg:w-full lg:flex-row lg:gap-8">
+              <a href="#" class="group relative flex items-center justify-between rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-10 py-4 text-white max-[1080px]:px-8 max-[1080px]:text-sm">Let's discuss your project <span class="relative ml-3 font-jakartaSans text-xl font-light transition-transform group-hover:translate-x-4">&#8594;</span></a>
+              <a href="#next_hero" class="group relative flex items-center justify-between rounded-full border-[2px] border-[#26A768] px-10 py-5 max-[1080px]:px-8 max-[1080px]:text-sm">Keep reading <span class="ml-3 font-jakartaSans text-xl font-light transition-transform group-hover:translate-x-4">&#8595;</span></a>
+            </div>
+          </div>
+        </section>
+        <section id="next_hero" class="mx-auto w-full max-w-7xl px-4 py-24 min-[1080px]:mt-36">
+          <div data-aos="fade-up" class="relative mx-auto w-full rounded-[60px] bg-[#D2E6FF] px-4 py-20 text-center md:w-[80%] min-[1080px]:px-64 min-[1080px]:py-24">
+            <h3>Freelance Flutter Developer</h3>
+            <p class="mt-5 w-full font-jakartaSans font-light leading-7 max-md:mx-auto max-md:mt-5 max-md:text-center max-md:text-base">Are you looking for a Freelance Flutter Developer to create stunning apps for Android, iOS, web, or desktop?</p>
+            <a href="#form_section" class="md:text-md mx-auto mt-5 flex w-fit items-center justify-between rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-8 py-4 text-sm text-white md:px-10">Contact me</a>
+            <img class="absolute -left-[2%] -top-[2%] max-[1080px]:max-w-[75px] min-[1080px]:max-w-[112px]" src="./img/yellow_circle.png" alt="" />
+            <img class="absolute -bottom-[15%] right-0 max-[1080px]:max-w-[113px] min-[1080px]:max-w-[148px]" src="./img/yr-halfc.png" alt="" />
+          </div>
+        </section>
+        <section class="relative mt-36 flex items-center" style="background: url('./img/idea_bg.png') no-repeat center right -10% / 20%">
+          <div class="z-10 mx-auto block w-full max-w-7xl px-4 max-md:flex max-md:max-w-full max-md:flex-col min-[1920px]:mt-7">
+            <span data-aos="fade-right" class="mx-auto block text-center text-sm md:m-0 md:inline-block md:text-start md:text-lg">Your All-Inclusive Solution For Mobile App Development</span>
+            <h2 class="my-2 mt-5 w-fit text-[52px] leading-tight max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:text-center max-md:text-[22px]">From your <span class="relative z-10 block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#EA552B]">idea to completion</span></h2>
+            <p data-aos="fade-right" class="mt-10 w-[55%] max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">As a Europe-based remote worker, I've collaborated with clients across the <b class="font-bold">UK</b>, the <b class="font-bold">USA</b>, and <b class="font-bold">Europe</b>, focusing on your unique requirements and goals.</p>
+            <p data-aos="fade-right" class="mt-10 w-[45%] max-w-[70%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:mt-5 max-md:w-full max-md:text-center max-md:text-base">In the past few years, I have specialized in Flutter development, o0ering seamless cross-platform solutions to cater to your specific needs and propel your business forward.</p>
+            <span class="mt-7 block max-md:text-center max-md:text-sm">My expertise ensures that your app idea comes to life as envisioned</span>
+            <div class="mt-5 flex w-full justify-between gap-5 px-16 max-lg:flex-col max-lg:px-0 lg:gap-24">
+              <div class="flex items-center gap-5 px-8 py-5 lg:py-16 lg:pl-24" style="background: url('./img/yellow_stain.png') no-repeat center left/contain">
+                <span class="text-[84px] max-lg:text-[50px]">10</span>
+                <p class="text-2xl lg:text-3xl">years of experience</p>
+              </div>
+              <div class="flex items-center gap-5 px-8 py-5 max-lg:flex-row-reverse lg:py-16 lg:pl-24" id="stain" style="background: url('./img/red_stain.png') no-repeat center left/contain">
+                <span class="text-[84px] max-lg:text-[50px]">30+</span>
+                <p class="text-2xl lg:text-3xl">successful mobile applications</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mx-auto mt-10 flex w-full max-w-7xl flex-col gap-5 px-4 lg:flex-row min-[1080px]:mt-36">
+          <div data-aos="flip-left" class="w-full flex-1">
+            <img class="w-full" src="./img/start_finish.png" alt="" />
+          </div>
+          <div class="z-10 block flex-1">
+            <span data-aos="fade-left" class="mx-auto block text-center text-sm md:m-0 md:inline-block md:text-start md:text-lg">I have an idea for a mobile app.</span>
+            <h1 class="my-2 text-[52px] leading-tight max-xl:w-fit max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:w-fit max-md:text-center max-md:text-[22px]">
+              Can You Develop Flutter <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#FFC900]">Mobile Apps</span><br />
+              <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#FFC900]">From Start To Finish?</span>
+            </h1>
+            <p data-aos="fade-left" class="mt-8 max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">In the past few years, I have specialized in Flutter development, o0ering seamless cross-platform solutions to Not sure how to get started with your mobile app idea? No problem! I can assist with project planning, strategy, design, development, and release, ensuring a seamless process from start to finish. My services cover everything from app idea conception to launch on app stores. to your specific needs and propel your business forward.</p>
+            <a href="#form_section" class="md:text-md mx-auto mt-5 flex w-fit items-center justify-between rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-8 py-4 text-sm text-white md:px-10 lg:mr-auto">Contact me</a>
+          </div>
+        </section>
+        <section class="mx-auto mt-10 flex w-full max-w-7xl flex-col gap-5 px-4 lg:flex-row min-[1080px]:mt-36">
+          <div class="z-10 block flex-1">
+            <span data-aos="fade-right" class="mx-auto block text-center text-sm md:m-0 md:inline-block md:text-start md:text-lg">I have a design ready.</span>
+            <h1 class="my-2 text-[52px] leading-tight max-xl:w-fit max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:w-fit max-md:text-center max-md:text-[22px]">
+              Can You Convert <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#EA552B]">My Design Into Flutter</span><br />
+              <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#EA552B]"> Mobile App?</span>
+            </h1>
+            <p data-aos="fade-right" class="mt-8 max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Already have a design, or an existing app, or running a successful web-based service and looking to create a mobile app? I can work with you to convert your design into a fully-functional Flutter app or improve your current app to suit your needs better.</p>
+            <a href="#form_section" class="md:text-md mx-auto mt-5 flex w-fit items-center justify-between rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-8 py-4 text-sm text-white md:px-10 lg:mr-auto">Contact me</a>
+          </div>
+          <div data-aos="flip-right" class="w-full flex-1">
+            <img class="w-full" src="./img/convert.png" alt="" />
+          </div>
+        </section>
+        <section class="mt-52 overflow-hidden">
+          <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 lg:flex-row">
+            <h4 class="my-2 mt-5 w-fit text-[52px] leading-tight max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:text-center max-md:text-[22px]"><span class="relative z-10 block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#26A768]">50+ Verified Reviews</span></h4>
+            <h4 class="my-2 mt-5 w-fit text-[52px] leading-tight max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:text-center max-md:text-[22px]">100% Success Rate</h4>
+          </div>
+          <div class="swiper mt-10 w-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+              <div class="swiper-slide w-full max-w-[590px] rounded-[40px] bg-[#D2E6FF] px-4 py-20 lg:px-24 lg:py-10">
+                <h5 class="text-2xl">Nancy Biggs</h5>
+                <p>tenniscores.com</p>
+                <div class="mt-5 flex items-center gap-2">
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                  <img src="./img/star.svg" alt="star" />
+                </div>
+                <p class="mt-5 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Zoran went above and beyond with this project. He has an outstanding work ethic and is extremely professional. Delivered great quality work on time. Will work with him again in the future.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="form_section" class="mx-auto mt-5 flex w-full max-w-7xl flex-col justify-between gap-20 px-4 lg:mt-36 lg:min-w-[1080px] lg:flex-row lg:justify-between lg:gap-20">
+          <div class="z-10 block flex-auto">
+            <span data-aos="fade-right" class="mx-auto block text-center text-sm md:m-0 md:inline-block md:text-start md:text-lg">Your satisfaction guaranteed</span>
+            <h1 class="my-2 text-[52px] leading-tight max-xl:w-fit max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:w-fit max-md:text-center max-md:text-[22px]">
+              <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#FFC900]">A Happiness Guarantee</span>
+              For Your Mobile App Project
+            </h1>
+            <p data-aos="fade-right" class="mt-8 max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">I am dedicated to ensuring each client receives the personalized attention they deserve. By limiting my client intake to just one new project per month, I can devote my full attention to your app’s success. This focus allows me to o0er expert consulting and a happiness guarantee, ensuring that you're thrilled with the final product</p>
+            <p data-aos="fade-right" class="mt-8 max-w-[80%] font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base">Don’t wait to secure your spot in my schedule — get in touch today to start your journey towards a successful Flutter app project. I'm excited to partner with you and help bring your vision to life.</p>
+          </div>
+          <div data-aos="flip-right" class="w-full min-[1080px]:min-w-[495px]">
+            <form>
+              <h5 class="max-lg:text-center">Contact Me</h5>
+              <div class="group relative w-full">
+                <input class="mt-5 w-full rounded-[90px] border-none bg-[#FFF3ED] px-10 py-4 font-jakartaSans font-light focus:outline-none" id="name" name="name" type="text" placeholder="Name:" required />
+              </div>
+              <div class="group relative w-full">
+                <input class="mt-5 w-full rounded-[90px] border-none bg-[#FFF3ED] px-10 py-4 font-jakartaSans font-light focus:outline-none" id="phone" name="phone" type="tel" placeholder="Phone:" required />
+                <span id="phone_error"></span>
+              </div>
+              <div class="group relative w-full">
+                <input class="mt-5 w-full rounded-[90px] border-none bg-[#FFF3ED] px-10 py-4 font-jakartaSans font-light focus:outline-none" id="email" name="email" type="email" placeholder="Email:" required />
+              </div>
+              <div class="group relative w-full">
+                <textarea class="mt-5 w-full resize-none rounded-[90px] border-none bg-[#FFF3ED] px-10 py-4 font-jakartaSans font-light focus:outline-none" id="textarea" name="textarea" maxlength="90" type="textarea" placeholder="Message:" required></textarea>
+              </div>
+              <button type="submit" class="mr-auto mt-5 flex w-full items-center justify-center rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-10 py-4 text-center text-xl text-white max-[1080px]:px-8 max-[1080px]:text-sm">Submit</button>
+            </form>
+          </div>
+        </section>
+        <section class="mt-5 px-4 min-[1080px]:mt-36" style="background: url('./img/acc_bg.png') no-repeat bottom right -20% / 30%">
+          <div class="mx-auto flex w-full max-w-7xl flex-col gap-5">
+            <div class="z-10 block flex-1">
+              <span data-aos="fade-left" class="mx-auto block text-center text-sm md:m-0 md:inline-block md:text-start md:text-lg">Valuing Your Time</span>
+              <h1 class="my-2 text-[52px] leading-tight max-xl:w-fit max-xl:text-4xl max-md:mx-auto max-md:my-0 max-md:w-fit max-md:text-center max-md:text-[22px]">
+                <span class="relative z-10 inline-block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:block before:h-6 before:w-full before:skew-x-12 before:bg-[#FFC900]">Explore These FAQs</span><br />
+                For Additional Insights
+              </h1>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc1.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>Could you quickly recap why you're the top choice for Flutter development?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-3 pl-0 text-justify text-base font-light leading-6 lg:mt-0 lg:pl-20">Absolutely! Here's a summary of what sets me apart in the world of Flutter development:</p>
+                <ul class="max-w-full list-disc pl-0 font-jakartaSans font-light lg:max-w-[80%] lg:pl-24">
+                  <li>Cross-platform development using Flutter for Android, iOS, and web — offering seamless solutions for your specific needs.</li>
+                  <li>A dedicated partner who understands your goals and guides you through the entire process, from idea to launch.</li>
+                  <li>A risk-free, personalized approach to app development that caters to your unique requirements.</li>
+                  <li>A wealth of experience with over 30 successful mobile apps and 10+ years in the industry, ensuring your project is in capable hands.</li>
+                  <li>Clear communication and collaboration, resulting in a smooth and stress-free experience throughout the project.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc2.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>What is your development process for app projects?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-3 pl-0 text-justify text-base font-light leading-6 lg:mt-0 lg:pl-20">As a freelance app developer, I follow a structured, professional approach to ensure the success of your app project. The main steps in my development process are:</p>
+                <ul class="max-w-full list-disc pl-0 font-jakartaSans font-light lg:max-w-[80%] lg:pl-24">
+                  <li>Identifying challenges and clarifying your app idea.</li>
+                  <li>Creating a comprehensive requirements document and proposing a custom app solution.</li>
+                  <li>Client approval of the proposed solution.</li>
+                  <li>Collaborating with the client’s team or an external contractor for app design (optional).</li>
+                  <li>Revising the design based on client feedback (if applicable).</li>
+                  <li>Developing the app and conducting alpha testing with the client.</li>
+                  <li>Preparing the app for release on iOS and Android platforms.</li>
+                  <li>Conducting beta testing and addressing any required modifications.</li>
+                  <li>Supporting the successful launch of the app on app stores.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc3.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>Why do you choose to work with Flutter and why should I choose it?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">I have chosen to specialize in Flutter because it o0ers numerous benefits for mobile app development. With Flutter, you can develop cross-platform apps for Android, iOS, and web using a single source code. This saves time and money as there is no need to hire multiple developers for di0erent platforms.</p>
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">Additionally, Flutter provides a high-quality user experience, fast development cycles, and easy maintenance. By choosing Flutter for your app development needs, you can benefit from these advantages and receive a top-quality app that functions seamlessly across multiple platforms.</p>
+              </div>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc4.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>Do I need technical knowledge to ensure the success of my project?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">No, you don't need extensive technical knowledge to ensure your project's success. My approach is designed to be straightforward and enjoyable for clients of all technical backgrounds. With a 100% success rate and Upwork's Top Rated Plus badge, you can trust that you're partnering with a reliable and skilled professional who can eñectively guide you through the entire development process.</p>
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">Additionally, Flutter provides a high-quality user experience, fast development cycles, and easy maintenance. By choosing Flutter for your app development needs, you can benefit from these advantages and receive a top-quality app that functions seamlessly across multiple platforms.</p>
+              </div>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc5.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>How do you make sure the project succeeds and I'm happy with the result?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">I believe in closely collaborating with my clients and understanding their needs. By oPering helpful suggestions and communicating clearly throughout the development process, I strive to ensure your satisfaction with the final outcome. I am precise about details and deadlines to deliver high-quality work within the agreed timeframe.</p>
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">For me, a successful project is when your idea or vision is translated well into a functional and high-quality app experience without under or over-communicating. I aim to understand your needs and handle your idea with care and precision to deliver a satisfactory final product.</p>
+              </div>
+            </div>
+            <div class="transition">
+              <div class="accordion-header flex h-16 cursor-pointer items-center space-x-5 transition lg:space-x-11">
+                <div class="flex h-14 w-[30px] items-center justify-center text-sm lg:w-[60px]" style="background: url('./img/acc6.svg') no-repeat center/contain">
+                  <i class="fas fa-plus transition-transform"></i>
+                </div>
+                <h3>What happens if I fill out the contact form?</h3>
+              </div>
+              <div class="accordion-content max-h-0 overflow-hidden px-5 pt-0">
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">After you submit the contact form, I will review your information to determine if we might be a good fit. If so, I will suggest scheduling a free strategy call. The strategy call typically lasts about an hour, during which I actively seek solutions to your specific challenges. By asking the right questions and gaining clarity on your needs, I can point you in the right direction and propose specific next steps for your project.</p>
+                <p class="mt-8 max-w-full pl-0 font-jakartaSans font-light leading-7 max-md:mx-auto max-md:w-full max-md:text-center max-md:text-base lg:max-w-[80%] lg:pl-20">After the call, I will provide you with a problem write-up and a proposed solution. Whether or not we ultimately decide to work together, you will walk away from the call with a clear action plan for your business's next steps.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mx-auto w-full max-w-7xl px-4 py-24 min-[1080px]:mt-36">
+          <div data-aos="fade-up" class="min-[1080px]:px-54 relative mx-auto w-full rounded-[60px] bg-[#D2E6FF] px-4 py-20 text-center lg:w-[80%] min-[1080px]:py-24">
+            <h3>Don't hesitate to contact me today</h3>
+            <p class="mt-5 w-full font-jakartaSans font-light leading-7 max-md:mx-auto max-md:mt-5 max-md:text-center max-md:text-base">If you're ready to turn your app idea into reality.</p>
+            <a href="#form_section" class="md:text-md mx-auto mt-5 flex w-fit items-center justify-between rounded-full border-[2px] border-[#26A768] bg-[#26A768] px-8 py-4 text-sm text-white md:px-10">Let's discuss your project</a>
+            <img class="absolute -left-[2%] -top-[2%] max-[1080px]:max-w-[75px] min-[1080px]:max-w-[112px]" src="./img/red_circle.png" alt="" />
+            <img class="absolute -bottom-[15%] -right-[5%] max-[1080px]:max-w-[113px] min-[1080px]:max-w-[148px]" src="./img/red-halfc.png" alt="" />
+          </div>
+        </section>
+      </main>
+      <footer class="pb-40 pt-24" style="background: url('./img/footer_bg.png') no-repeat bottom -130px left -20%/450px">
+        <section class="flex flex-col items-center justify-center">
+          <a href="/" class="relative block max-w-xs text-[#26A768] max-md:z-20">
+            <!-- <img class="w-full" src="" alt="Logo" /> -->
+            <span class="text-[80px] font-bold">ZP</span>
+          </a>
+          <div class="mt-10 flex items-center gap-7">
+            <a href="#" class="flex h-14 w-[60px] items-center justify-center transition-transform hover:scale-110" style="background: url('./img/git_bg.png') no-repeat center/contain">
+              <img src="./img/git.svg" alt="Github" />
+            </a>
+            <a href="#" class="flex h-14 w-[60px] items-center justify-center transition-transform hover:scale-110" style="background: url('./img/linkedin_bg.png') no-repeat center/contain">
+              <img src="./img/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="#" class="flex h-14 w-[60px] items-center justify-center transition-transform hover:scale-110" style="background: url('./img/facebook_bg.png') no-repeat center/contain">
+              <img src="./img/facebook.svg" alt="Facebook" />
+            </a>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="module" src="./js/scripts.js"></script>
+  </body>
+</html>
